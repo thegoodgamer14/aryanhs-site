@@ -1,13 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import HeroSection from "@/components/HeroSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import VolunteeringSection from "@/components/VolunteeringSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
+  // Set dark mode by default
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    if (!stored) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.toggle("dark", stored === "dark");
+    }
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <Navigation />
+      <HeroSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <VolunteeringSection />
+      <ContactSection />
+      <Footer />
+    </main>
   );
 };
 
