@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, FileText, BookOpen, Dumbbell, Music, PenLine } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
+import { Github, Linkedin, Twitter, Mail, FileText, BookOpen, Dumbbell, Music, PenLine, Guitar } from "lucide-react";
 
 const HeroSection = () => {
   const socialLinks = [
     { icon: Github, href: "https://github.com/thegoodgamer14", label: "GitHub" },
     { icon: Linkedin, href: "https://linkedin.com/in/aryanhs145", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Twitter, href: "https://x.com/0xh_aryan", label: "Twitter" },
     { icon: Mail, href: "mailto:ahsnotify03@gmail.com", label: "Email" },
   ];
 
   const interests = [
-    { icon: BookOpen, label: "Reading" },
-    { icon: Music, label: "Metalhead" },
-    { icon: PenLine, label: "Writing" },
-    { icon: Dumbbell, label: "Gym" },
+    { icon: BookOpen, label: "Reading", href: "https://www.goodreads.com/user/show/50225131-aryan" },
+    { icon: Music, label: "Metalhead", href: "https://open.spotify.com/playlist/37i9dQZF1DX49jUV2NfGku?si=O3ZjHegdT-uzRGlhyk4BQw" },
+    { icon: PenLine, label: "Writing", href: "https://medium.com/@aryan.sgrbk" },
+    { icon: Dumbbell, label: "Gym", href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D" },
+    { icon: Guitar, label: "Guitar", href: "https://www.youtube.com/watch?v=LTseTg48568&pp=ygUQY29tZm9ydGFibHkgbnVtYg%3D%3D" },
   ];
 
   return (
@@ -26,16 +26,6 @@ const HeroSection = () => {
       </div>
 
       <div className="section-container text-center relative z-10">
-        {/* Theme toggle - absolute positioned */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="absolute top-6 right-6"
-        >
-          <ThemeToggle />
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,7 +56,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-lg">
-            Full-stack engineer building scalable web applications. 
+            Full-stack engineer building scalable web applications.
             Currently crafting digital experiences in Dubai.
           </p>
         </motion.div>
@@ -96,7 +86,8 @@ const HeroSection = () => {
             </motion.a>
           ))}
           <motion.a
-            href="#"
+            href="https://drive.google.com/file/d/1fCzKFmqeTAlfwS40s_IzjKox2dFfI_Pf/view?usp=sharing"
+            target="_blank"
             className="btn-outline ml-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -116,12 +107,17 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="flex items-center justify-center gap-6 text-muted-foreground/60 text-sm"
         >
-          <span className="text-muted-foreground/40">When I'm not working →</span>
+          <span className="text-muted-foreground/40">I also like to →</span>
           {interests.map((interest) => (
-            <span key={interest.label} className="flex items-center gap-1.5 hover:text-primary transition-colors">
+            <a
+              key={interest.label}
+              href={interest.href}
+              target="_blank"
+              className="flex items-center gap-1.5 hover:text-primary transition-colors"
+            >
               <interest.icon className="w-4 h-4" />
               <span className="hidden sm:inline">{interest.label}</span>
-            </span>
+            </a>
           ))}
         </motion.div>
 
@@ -130,7 +126,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          className="absolute bottom-0 left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}

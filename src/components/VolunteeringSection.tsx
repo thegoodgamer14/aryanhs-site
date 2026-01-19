@@ -48,7 +48,7 @@ const VolunteeringSection = () => {
             <div className="flex items-start justify-between mb-2">
               <div>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/rotaractiiitm/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xl font-semibold link-accent group"
@@ -63,7 +63,7 @@ const VolunteeringSection = () => {
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
-                Jan 2022 – Present
+                Jan 2022 – Mar 2025
               </span>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-4 h-4" />

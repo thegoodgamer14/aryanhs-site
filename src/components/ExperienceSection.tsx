@@ -13,6 +13,7 @@ const experiences = [
       "Refactored 2 critical modules to ensure light-weight delivery while enhancing functionality. Modified outbound message backend to accommodate custom templates and channel-specific reminders.",
       "Integrated Wafeq accounting APIs via short-polling service to sync 7 core modules ERP data. Setup OAuth 2.0 sign in for establishing one-click connections with Wafeq.",
     ],
+    techStack: ["TypeScript", "Node.js", "React", "PostgreSQL", "REST APIs", "OAuth 2.0"],
   },
   {
     company: "Bluecrest Software",
@@ -25,6 +26,7 @@ const experiences = [
       "Derived 29 facts to analyze retail performance across sales, stock and target related business metrics.",
       "Delivered 5 BI dashboards on Metabase covering 15+ business KPIs in collaboration with product, business analysis and client teams.",
     ],
+    techStack: ["SQL", "Python", "Metabase", "Data Warehousing", "ETL", "Star Schema"],
   },
 ];
 
@@ -40,15 +42,10 @@ const ExperienceSection = () => {
         Experience
       </motion.h2>
 
-      <div className="relative">
-        {/* Timeline line */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border hidden md:block" />
-
-        <div className="space-y-12">
-          {experiences.map((exp, index) => (
-            <ExperienceCard key={exp.company} {...exp} index={index} />
-          ))}
-        </div>
+      <div className="space-y-6">
+        {experiences.map((exp, index) => (
+          <ExperienceCard key={exp.company} {...exp} index={index} />
+        ))}
       </div>
     </section>
   );

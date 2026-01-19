@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Star } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   name: string;
@@ -57,7 +57,6 @@ const ProjectCard = ({
       {/* Featured badge */}
       {featured && (
         <div className="absolute -top-2 -right-2 tag-featured flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium z-10">
-          <Star className="w-3 h-3 fill-current" />
           Featured
         </div>
       )}

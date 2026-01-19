@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { Home } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "Experience", href: "#experience" },
@@ -9,25 +10,22 @@ const navItems = [
 ];
 
 const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: isScrolled ? 1 : 0, y: isScrolled ? 0 : -20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
-      style={{ pointerEvents: isScrolled ? "auto" : "none" }}
+      className="fixed top-4 inset-x-0 z-50 flex justify-center"
     >
-      <div className="flex items-center gap-1 px-2 py-2 bg-card/80 backdrop-blur-lg border border-border rounded-full shadow-lg">
+      <div className="flex items-center gap-1 px-2 py-2 bg-card/60 backdrop-blur-lg border border-border rounded-full shadow-lg">
+        <ThemeToggle />
+        <a
+          href="#"
+          className="p-2 text-muted-foreground hover:text-foreground hover:bg-secondary rounded-full transition-all duration-200"
+          aria-label="Home"
+        >
+          <Home className="w-5 h-5" />
+        </a>
         {navItems.map((item) => (
           <a
             key={item.label}

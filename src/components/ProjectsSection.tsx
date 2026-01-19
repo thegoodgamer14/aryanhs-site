@@ -12,7 +12,7 @@ const projects = [
       "Cross-domain evaluation across mechanical and electrical engineering using 2.5M+ words corpus.",
       "Architected extraction pipeline with regex pattern recognition and IOB2 tagging for NER.",
     ],
-    githubUrl: "#",
+    githubUrl: "https://github.com/thegoodgamer14/Engineering-Specification-Extraction-Tool",
     featured: true,
   },
   {
@@ -25,8 +25,8 @@ const projects = [
       "Scalable server/channel management with role-based access control and unique invite links.",
       "Multimedia communication with LiveKit WebRTC for 1:1 video/audio calls and infinite scroll pagination.",
     ],
-    githubUrl: "#",
-    liveUrl: "#",
+    githubUrl: "https://github.com/thegoodgamer14/carrt",
+    liveUrl: "https://carrt.vercel.app",
     featured: true,
   },
 ];
