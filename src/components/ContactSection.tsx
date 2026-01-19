@@ -3,10 +3,10 @@ import { useState, FormEvent } from "react";
 import { Send, CheckCircle, AlertCircle, Loader2, Github, Linkedin, Twitter, Mail, FileText } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
-// EmailJS Configuration - Replace with your credentials
-const EMAILJS_SERVICE_ID = "your_service_id";
-const EMAILJS_TEMPLATE_ID = "your_template_id";
-const EMAILJS_PUBLIC_KEY = "your_public_key";
+// EmailJS Configuration - Set these in your .env file
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/thegoodgamer14", label: "GitHub" },

@@ -13,10 +13,10 @@ const experiences = [
       "Refactored 2 critical modules to ensure light-weight delivery while enhancing functionality. Modified outbound message backend to accommodate custom templates and channel-specific reminders.",
       "Integrated Wafeq accounting APIs via short-polling service to sync 7 core modules ERP data. Setup OAuth 2.0 sign in for establishing one-click connections with Wafeq.",
     ],
-    techStack: ["TypeScript", "Node.js", "React", "PostgreSQL", "REST APIs", "OAuth 2.0"],
+    techStack: ["TypeScript", "Node.js", "React", "PostgreSQL", "REST APIs", "OAuth 2.0", "Docker", "AWS S3"],
   },
   {
-    company: "Bluecrest Software",
+    company: "Bluecrest Software (now Mohap.ai)",
     companyUrl: "https://mohap.ai/",
     role: "Software Development Intern",
     duration: "May 2024 – Sep 2024",
@@ -26,7 +26,7 @@ const experiences = [
       "Derived 29 facts to analyze retail performance across sales, stock and target related business metrics.",
       "Delivered 5 BI dashboards on Metabase covering 15+ business KPIs in collaboration with product, business analysis and client teams.",
     ],
-    techStack: ["SQL", "Python", "Metabase", "Data Warehousing", "ETL", "Star Schema"],
+    techStack: ["SQL", "Python", "Metabase", "Data Warehousing", "ETL", "Data Analytics"],
   },
 ];
 
