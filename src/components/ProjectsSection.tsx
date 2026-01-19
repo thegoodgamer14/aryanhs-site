@@ -12,7 +12,7 @@ const projects = [
       "Cross-domain evaluation across mechanical and electrical engineering using 2.5M+ words corpus.",
       "Architected extraction pipeline with regex pattern recognition and IOB2 tagging for NER.",
     ],
-    githubUrl: "https://github.com/thegoodgamer14/Engineering-Specification-Extraction-Tool",
+    githubUrl: "https://github.com/thegoodgamer14/tech-spec-extractor",
     featured: true,
   },
   {
