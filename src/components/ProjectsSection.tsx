@@ -26,7 +26,7 @@ const projects = [
       "Multimedia communication with LiveKit WebRTC for 1:1 video/audio calls and infinite scroll pagination.",
     ],
     githubUrl: "https://github.com/thegoodgamer14/carrt",
-    liveUrl: "https://carrt.vercel.app",
+    liveUrl: "https://carrt-3g8e.onrender.com/",
     featured: true,
   },
 ];
