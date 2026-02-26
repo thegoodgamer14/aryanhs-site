@@ -24,8 +24,8 @@ const ExperienceCard = ({
 }: ExperienceCardProps) => {
   // Function to bold numbers in text
   const formatBullet = (text: string) => {
-    return text.split(/(\d+\.?\d*\+?%?)/g).map((part, i) => {
-      if (/^\d+\.?\d*\+?%?$/.test(part)) {
+    return text.split(/(\$?\d+\.?\d*k?\+?%?)/g).map((part, i) => {
+      if (/^\$?\d+\.?\d*k?\+?%?$/.test(part) && /\d/.test(part)) {
         return (
           <span key={i} className="text-primary font-semibold">
             {part}
