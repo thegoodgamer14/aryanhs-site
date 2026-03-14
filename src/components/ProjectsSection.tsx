@@ -27,6 +27,20 @@ const projects = [
     ],
     githubUrl: "https://github.com/thegoodgamer14/carrt",
     liveUrl: "https://carrt-3g8e.onrender.com/",
+    featured: false,
+  },
+  {
+    name: "Walmart Sales Analysis and Forecasting",
+    tags: ["Data Science", "Data Analytics", "ML"],
+    techStack: ["Python", "Pandas", "NumPy", "Tableau", "Matplotlib", "XGBoost"],
+    date: "Jan 2026",
+    description: [
+      "Engineered a multivariate time-series forecasting pipeline across 45 retail stores, constructing complex temporal features (52-week historical lags, rolling averages) and integrating macroeconomic indicators to solve the limitations of classical univariate ARIMA models.",
+      "Architected and trained ensemble machine learning models (XGBoost, Random Forest) utilizing a strict chronological 80/20 train-test split to eliminate temporal data leakage, achieving a 98.5% R2 score on unseen test data.",
+      "Developed an interactive Tableau business intelligence dashboard ready for supply chain and marketing teams, translating XGBoost feature importance metrics into dynamic inventory allocation heatmaps and actionable promotional planners.",
+    ],
+    kaggleUrl: "https://www.kaggle.com/code/thegoodgamer14/walmart-sales-analysis-and-forecasting",
+    tableauUrl: "https://public.tableau.com/app/profile/aryan.sharma8116/viz/WalmartSalesAnalysisandForecast/Dashboard1",
     featured: true,
   },
 ];
@@ -44,9 +58,11 @@ const ProjectsSection = () => {
       </motion.h2>
 
       <div className="grid md:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
-          <ProjectCard key={project.name} {...project} index={index} />
-        ))}
+        {[...projects]
+          .sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0))
+          .map((project, index) => (
+            <ProjectCard key={project.name} {...project} index={index} />
+          ))}
       </div>
     </section>
   );

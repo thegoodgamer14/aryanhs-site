@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, BookOpen, BarChart3 } from "lucide-react";
 
 interface ProjectCardProps {
   name: string;
@@ -9,6 +9,8 @@ interface ProjectCardProps {
   description: string[];
   githubUrl?: string;
   liveUrl?: string;
+  kaggleUrl?: string;
+  tableauUrl?: string;
   featured?: boolean;
   index: number;
 }
@@ -29,6 +31,8 @@ const ProjectCard = ({
   description,
   githubUrl,
   liveUrl,
+  kaggleUrl,
+  tableauUrl,
   featured,
   index,
 }: ProjectCardProps) => {
@@ -110,6 +114,28 @@ const ProjectCard = ({
           >
             <Github className="w-4 h-4" />
             GitHub
+          </a>
+        )}
+        {kaggleUrl && (
+          <a
+            href={kaggleUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline text-sm"
+          >
+            <BookOpen className="w-4 h-4" />
+            Kaggle
+          </a>
+        )}
+        {tableauUrl && (
+          <a
+            href={tableauUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary text-sm"
+          >
+            <BarChart3 className="w-4 h-4" />
+            Tableau
           </a>
         )}
         {liveUrl && (
