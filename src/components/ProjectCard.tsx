@@ -5,7 +5,6 @@ interface ProjectCardProps {
   name: string;
   tags: string[];
   techStack: string[];
-  date: string;
   description: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -27,7 +26,6 @@ const ProjectCard = ({
   name,
   tags,
   techStack,
-  date,
   description,
   githubUrl,
   liveUrl,
@@ -89,9 +87,6 @@ const ProjectCard = ({
           </span>
         ))}
       </div>
-
-      {/* Date */}
-      <p className="text-xs text-muted-foreground mb-4">{date}</p>
 
       {/* Description */}
       <ul className="space-y-2 flex-1">

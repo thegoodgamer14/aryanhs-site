@@ -30,6 +30,19 @@ const projects = [
     featured: false,
   },
   {
+    name: "Telecom Customer Churn Prediction",
+    tags: ["Data Science", "MLOps", "ML"],
+    techStack: ["Python", "XGBoost", "AWS SageMaker", "AWS S3", "Pandas", "NumPy"],
+    date: "Mar 2026",
+    description: [
+      "Architected an end-to-end Machine Learning pipeline for predicting telecom customer churn, deriving 44 high-signal features and optimizing an XGBoost ensemble to achieve an 0.84 AUC-ROC and 0.64 F1-Score.",
+      "Orchestrated a secure, headless cloud training framework built on AWS SageMaker and Amazon S3, implementing dynamic IAM roles and automated artifact retrieval scripts for scalable MLOps.",
+      "Calibrated prediction serving through precision-recall threshold tuning, mathematically balancing the model's sensitivity to capture maximum churners while minimizing false-positive retention costs.",
+    ],
+    githubUrl: "https://github.com/thegoodgamer14/telco-customer-churn",
+    featured: true,
+  },
+  {
     name: "Walmart Sales Analysis and Forecasting",
     tags: ["Data Science", "Data Analytics", "ML"],
     techStack: ["Python", "Pandas", "NumPy", "Tableau", "Matplotlib", "XGBoost"],
@@ -41,7 +54,7 @@ const projects = [
     ],
     kaggleUrl: "https://www.kaggle.com/code/thegoodgamer14/walmart-sales-analysis-and-forecasting",
     tableauUrl: "https://public.tableau.com/app/profile/aryan.sharma8116/viz/WalmartSalesAnalysisandForecast/Dashboard1",
-    featured: true,
+    featured: false,
   },
 ];
 
